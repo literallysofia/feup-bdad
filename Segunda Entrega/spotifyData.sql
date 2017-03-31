@@ -129,26 +129,26 @@ INSERT INTO Genero (idGenero, nome) VALUES (9, 'Instrumental');
 INSERT INTO Genero (idGenero, nome) VALUES (10, 'Hip Hop');
 
 -- Data : Musica
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (1, 'Stressed Out', 4, 92000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (2, 'Lane Boy', 4, 88000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (3, 'Playing God', 3, 17000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (4, 'Karma Police', 4, 73000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (5, 'No One Does It Better', 5, 6000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (6, 'Crash', 5, 7000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (7, 'Give', 3, 4000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (8, 'Do I Wanna Know', 4, 330000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (9, 'Cornerstone', 3, 17000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (10, 'Bloodstream', 5, 114000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (11, 'Let It Happen', 7, 56000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (12, 'Eventually', 5, 30000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (13, 'I Write Sins Not Tragedies', 3, 129000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (14, 'House Of Wolves', 3, 690000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (15, 'Monster', 4, 20000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (16, 'Fix You', 5, 251000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (17, 'Therapy', 4, 16000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (18, 'Cocoon', 4, 47000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (19, 'Starboy', 4, 656000000);
-INSERT INTO Musica (id, nome, duracao, reproducoes) VALUES (20, '3WW', 5, 4000000);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (1, 'Stressed Out', 4, 92000000, 6);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (2, 'Lane Boy', 4, 88000000, 6);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (3, 'Playing God', 3, 17000000, 2);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (4, 'Karma Police', 4, 73000000, 3);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (5, 'No One Does It Better', 5, 6000000, 5);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (6, 'Crash', 5, 7000000, 8);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (7, 'Give', 3, 4000000, 10);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (8, 'Do I Wanna Know', 4, 330000000, 5);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (9, 'Cornerstone', 3, 17000000, 5);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (10, 'Bloodstream', 5, 114000000, 9);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (11, 'Let It Happen', 7, 56000000, 1);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (12, 'Eventually', 5, 30000000, 8);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (13, 'I Write Sins Not Tragedies', 3, 129000000, 7);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (14, 'House Of Wolves', 3, 690000, 7);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (15, 'Monster', 4, 20000000, 4);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (16, 'Fix You', 5, 251000000, 2);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (17, 'Therapy', 4, 16000000, 1);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (18, 'Cocoon', 4, 47000000, 8);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (19, 'Starboy', 4, 656000000, 1);
+INSERT INTO Musica (id, nome, duracao, reproducoes, idGenero) VALUES (20, '3WW', 5, 4000000, 7);
 
 -- Data : MusicaAlbum
 INSERT INTO MusicaAlbum (idMusica, idAlbum, indice) VALUES (1, 1, 2);

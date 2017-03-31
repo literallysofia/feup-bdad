@@ -94,7 +94,8 @@ CREATE TABLE Musica (
   id INTEGER PRIMARY KEY,
   nome STRING NOT NULL,
   duracao TIME NOT NULL,
-  reproducoes INTEGER NOT NULL
+  reproducoes INTEGER NOT NULL,
+  idGenero INTEGER REFERENCES Genero (idGenero) NOT NULL
 );
 
 -- Table: MusicaAlbum
