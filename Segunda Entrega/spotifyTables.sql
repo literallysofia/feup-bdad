@@ -60,7 +60,7 @@ CREATE TABLE Dispositivo (
 
 -- Table: Envia
 CREATE TABLE Envia (
-  id INTEGER REFERENCES Mensagem (conteudo),
+  id INTEGER REFERENCES Mensagem (id),
   idUser INTEGER REFERENCES Utilizador (id) NOT NULL,
   PRIMARY KEY (id, idUser)
 );
@@ -137,20 +137,23 @@ CREATE TABLE Recebe (
 
 -- Table: SegueInterprete
 CREATE TABLE SegueInterprete (
-  idUser INTEGER REFERENCES Utilizador (id) PRIMARY KEY,
-  idInterprete INTEGER REFERENCES Interprete (id) NOT NULL
+  idUser INTEGER REFERENCES Utilizador (id),
+  idInterprete INTEGER REFERENCES Interprete (id) NOT NULL,
+  PRIMARY KEY (idUser, idInterprete)
 );
 
 -- Table: SeguePlaylist
 CREATE TABLE SeguePlaylist (
-  idUser INTEGER REFERENCES Utilizador (id) PRIMARY KEY,
-  idPlaylist INTEGER REFERENCES Playlist (id) NOT NULL
+  idUser INTEGER REFERENCES Utilizador (id),
+  idPlaylist INTEGER REFERENCES Playlist (id) NOT NULL,
+  PRIMARY KEY (idUser, idPlaylist)
 );
 
 -- Table: SegueUtilizador
 CREATE TABLE SegueUtilizador (
-  idUser INTEGER PRIMARY KEY REFERENCES Utilizador (id),
-  idUserSeguido INTEGER NOT NULL REFERENCES Utilizador (id)
+  idUser INTEGER REFERENCES Utilizador (id),
+  idUserSeguido INTEGER NOT NULL REFERENCES Utilizador (id),
+  PRIMARY KEY (idUser, idUserSeguido)
 );
 
 -- Table: TipoAlbum

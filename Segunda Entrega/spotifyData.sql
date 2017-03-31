@@ -334,6 +334,28 @@ INSERT INTO Recebe (id, idUser) VALUES (18, 3);
 INSERT INTO Recebe (id, idUser) VALUES (19, 2);
 INSERT INTO Recebe (id, idUser) VALUES (20, 1);
 
+-- Data : Envia
+INSERT INTO Envia (id, idUser) VALUES (1, 1);
+INSERT INTO envia (id, idUser) VALUES (2, 2);
+INSERT INTO Envia (id, idUser) VALUES (3, 3);
+INSERT INTO Envia (id, idUser) VALUES (4, 4);
+INSERT INTO Envia (id, idUser) VALUES (5, 5);
+INSERT INTO Envia (id, idUser) VALUES (6, 6);
+INSERT INTO Envia (id, idUser) VALUES (7, 7);
+INSERT INTO Envia (id, idUser) VALUES (8, 8);
+INSERT INTO Envia (id, idUser) VALUES (9, 9);
+INSERT INTO Envia (id, idUser) VALUES (10, 10);
+INSERT INTO Envia (id, idUser) VALUES (11, 11);
+INSERT INTO Envia (id, idUser) VALUES (12, 12);
+INSERT INTO Envia (id, idUser) VALUES (13, 13);
+INSERT INTO Envia (id, idUser) VALUES (14, 14);
+INSERT INTO Envia (id, idUser) VALUES (15, 15);
+INSERT INTO Envia (id, idUser) VALUES (16, 16);
+INSERT INTO Envia (id, idUser) VALUES (17, 17);
+INSERT INTO Envia (id, idUser) VALUES (18, 18);
+INSERT INTO Envia (id, idUser) VALUES (19, 19);
+INSERT INTO Envia (id, idUser) VALUES (20, 20);
+
 -- Data : SeguePlaylist
 INSERT INTO SeguePlaylist (idUser, idPlaylist) VALUES (1, 20);
 INSERT INTO SeguePlaylist (idUser, idPlaylist) VALUES (2, 19);
@@ -355,6 +377,28 @@ INSERT INTO SeguePlaylist (idUser, idPlaylist) VALUES (17, 4);
 INSERT INTO SeguePlaylist (idUser, idPlaylist) VALUES (18, 3);
 INSERT INTO SeguePlaylist (idUser, idPlaylist) VALUES (19, 2);
 INSERT INTO SeguePlaylist (idUser, idPlaylist) VALUES (20, 1);
+
+-- Data : SegueInterprete
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (1, 20);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (2, 19);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (3, 18);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (4, 17);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (5, 16);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (6, 15);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (7, 14);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (8, 13);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (9, 12);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (10, 11);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (11, 10);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (12, 9);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (13, 8);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (14, 7);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (15, 6);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (16, 5);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (17, 4);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (18, 3);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (19, 2);
+INSERT INTO SegueInterprete (idUser, idInterprete) VALUES (20, 1);
 
 -- Data : SegueUtilizador
 INSERT INTO SegueUtilizador (idUser, idUserSeguido) VALUES (1, 20);
