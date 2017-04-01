@@ -24,7 +24,7 @@ CREATE TABLE Cidade (
 DROP TABLE IF EXISTS Concerto;
 CREATE TABLE Concerto (
   idConcerto    INTEGER PRIMARY KEY,
-  data          DATE NOT NULL --CHECK(data > SELECT DATE('now')), --delete this check if fails
+  data          DATE NOT NULL --CHECK(data > SELECT DATE('now')),
   idInterprete  INTEGER REFERENCES Interprete (id) NOT NULL,
   idCidade      INTEGER REFERENCES Cidade (id) NOT NULL
 );
