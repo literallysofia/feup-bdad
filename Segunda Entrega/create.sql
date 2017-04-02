@@ -1,5 +1,7 @@
 PRAGMA foreign_keys = on;
-BEGIN TRANSACTION;
+.mode columns
+.headers on
+.nullvalue NULL
 
 -- Table: Album
 DROP TABLE IF EXISTS Album;
@@ -24,7 +26,7 @@ CREATE TABLE Cidade (
 DROP TABLE IF EXISTS Concerto;
 CREATE TABLE Concerto (
   idConcerto    INTEGER PRIMARY KEY,
-  data          DATE NOT NULL --CHECK(data > SELECT DATE('now')),
+  data          DATE NOT NULL,
   idInterprete  INTEGER REFERENCES Interprete (id) NOT NULL,
   idCidade      INTEGER REFERENCES Cidade (id) NOT NULL
 );
@@ -61,7 +63,7 @@ CREATE TABLE Interprete (
   verificado   BOOLEAN NOT NULL,
   fotoPerfil   BLOB,
   fotoCapa     BLOB,
-  biografia    STRING CHECK(LENGTH(conteudo) <= 300),
+  biografia    STRING CHECK(LENGTH(biografia) <= 300),
   idCidade     INTEGER REFERENCES Cidade (id) NOT NULL
 );
 
@@ -194,5 +196,4 @@ CREATE TABLE UtilizadorPremium (
   mensalidade     DOUBLE NOT NULL
 );
 
-COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
