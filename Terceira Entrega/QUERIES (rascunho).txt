@@ -1,0 +1,39 @@
+////As mensagens que um utilizador envia para outro utilizador
+
+SELECT M.id, M.conteudo, M.dataEnvio
+FROM Mensagem M, Utilizador URecebe, Recebe R
+WHERE URecebe.id=R.idUser AND M.id = R.idMensagem AND M.id in 
+(SELECT E.idMensagem
+FROM Utilizador UEnvia, Envia E
+WHERE UEnvia.id=E.idUser);
+
+////Duração de um album
+
+SELECT SUM(M.duracao)
+FROM Musica M
+WHERE M.id in
+(SELECT MA.idMusica
+FROM MusicaAlbum MA, Album A
+WHERE A.id=MA.idAlbum);
+
+////Os concertos de um interprete num pais
+
+SELECT O.idConcerto
+FROM Concerto O Interprete I
+WHERE O.idInterprete = I.id AND O.idCidade in
+(SELECT C.id
+FROM Cidade C, Pais P
+WHERE C.idPais = P.id);
+
+////Id dos Utilizadores premium que usam telemovel
+
+SELECT UP.id
+FROM TipoDispositivo TD, Dispositivo D,  Utilizador U, UtilizadorPremium UP,
+WHERE TD.tipoNome = 'Phone' AND D.idTipoDispositivo = TD.idTipoDispositivo AND U.id = D.idUser AND UP.id = U.id
+
+////Media das idades dos utilizadores que seguem uma playlist
+
+SELECT avg(U.idade)
+FROM Utilizador U, Playlist P, SeguePlaylist SP
+WHERE P.id = SP.idPlaylist AND U.id = SP.idUser
+
