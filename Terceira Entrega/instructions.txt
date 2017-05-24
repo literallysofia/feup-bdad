@@ -1,4 +1,4 @@
-- Instruções para abrirem e correrem a database no programa SQLite -
+﻿- Instruções para abrirem e correrem a database no programa SQLite -
 
 1. Instalar shell do sqlite no computador (tutorial no slide "SQLite Getting Started" no moodle)
 
@@ -12,5 +12,18 @@
 > .read populate.sql
 
 5. Agora já podem abrir o programa e veem que a database já está preenchida.
+
+- Intruçoes para testar abrirem a base de dados no SQLStudio
+
+1. Criar um ficheiro com extensão .db e abrir com o SQLStudio
+
+2. Clicar no icon com um lapis e uma folha e que diz "Open SQL Editor" (ALT+E)
+
+3. Onde diz query colar o codigo de criar tabelas sem as linhas que dizem ".mode columns .headers on .nullvalue NULL", selecionar o codigo que colaram e correr isso
+
+4. Fazer o mesmo para o popular
+
+5. Testar queries é assim tb (correr uma a uma) e triggers é capaz de ser tb
+
 
 (ADICIONAR AQUI INSTRUCOES DE COMO TESTAR QUERIES E TRIGGERS)

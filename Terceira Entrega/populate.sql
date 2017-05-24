@@ -37,7 +37,7 @@ INSERT INTO Cidade (id, nome, idPais) VALUES (12, 'Los Angeles', 14);
 INSERT INTO Cidade (id, nome, idPais) VALUES (13, 'New Orleans', 14);
 INSERT INTO Cidade (id, nome, idPais) VALUES (14, 'Madrid', 15);
 INSERT INTO Cidade (id, nome, idPais) VALUES (15, 'Barcelona', 15);
-INSERT INTO Cidade (id, nome, idPais) VALUES (16, 'Reykjav�k', 16);
+INSERT INTO Cidade (id, nome, idPais) VALUES (16, 'Reykjavik', 16);
 INSERT INTO Cidade (id, nome, idPais) VALUES (17, 'Sydney', 17);
 INSERT INTO Cidade (id, nome, idPais) VALUES (18, 'Melbourne', 17);
 INSERT INTO Cidade (id, nome, idPais) VALUES (19, 'Tokyo', 18);
@@ -267,16 +267,16 @@ INSERT INTO Top (idMusica, posicao, idCidade) VALUES (19, 14, 2);
 INSERT INTO Top (idMusica, posicao, idCidade) VALUES (20, 20, 1);
 
 -- Data : UtilizadorFree
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (11, 30);
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (12, 30);
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (13, 30);
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (14, 30);
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (15, 30);
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (16, 30);
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (17, 30);
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (18, 30);
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (19, 30);
-INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (20, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (1, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (2, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (3, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (4, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (5, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (6, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (7, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (8, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (9, 30);
+INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (10, 30);
 
 -- Data : UtilizadorPremium
 INSERT INTO UtilizadorPremium (id, mensalidade) VALUES (11, '9,99');
@@ -291,70 +291,27 @@ INSERT INTO UtilizadorPremium (id, mensalidade) VALUES (19, '6,99');
 INSERT INTO UtilizadorPremium (id, mensalidade) VALUES (20, '11,99');
 
 -- Data : Mensagem
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '01/06/2017');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '07/15/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '08/13/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/03/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '09/03/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/24/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (7, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '02/17/2017');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (8, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '12/26/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (9, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/01/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (10, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '11/15/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (11, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/29/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (12, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '11/06/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (13, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/19/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (14, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/26/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (15, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '05/24/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (16, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '04/11/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (17, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/27/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (18, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '02/23/2017');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (19, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '12/01/2016');
-INSERT INTO Mensagem (id, conteudo, dataEnvio) VALUES (20, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '09/16/2016');
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '01/06/2017',1,20);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '07/15/2016',2,19);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '08/13/2016',3,18);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/03/2016',4,17);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '09/03/2016',5,16);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/24/2016',6,15);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (7, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '02/17/2017',7,14);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (8, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '12/26/2016',8,13);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (9, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/01/2016',9,12);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (10, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '11/15/2016',10,11);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (11, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/29/2016',11,10);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (12, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '11/06/2016',12,9);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (13, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/19/2016',13,8);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (14, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/26/2016',14,7);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (15, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '05/24/2016',15,6);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (16, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '04/11/2016',16,5);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (17, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '10/27/2016',17,4);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (18, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '02/23/2017',18,3);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (19, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '12/01/2016',19,2);
+INSERT INTO Mensagem (id, conteudo, dataEnvio, idEmissor, idRecetor) VALUES (20, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '09/16/2016',20,1);
 
--- Data : Recebe
-INSERT INTO Recebe (id, idUser) VALUES (1, 20);
-INSERT INTO Recebe (id, idUser) VALUES (2, 19);
-INSERT INTO Recebe (id, idUser) VALUES (3, 18);
-INSERT INTO Recebe (id, idUser) VALUES (4, 17);
-INSERT INTO Recebe (id, idUser) VALUES (5, 16);
-INSERT INTO Recebe (id, idUser) VALUES (6, 15);
-INSERT INTO Recebe (id, idUser) VALUES (7, 14);
-INSERT INTO Recebe (id, idUser) VALUES (8, 13);
-INSERT INTO Recebe (id, idUser) VALUES (9, 12);
-INSERT INTO Recebe (id, idUser) VALUES (10, 11);
-INSERT INTO Recebe (id, idUser) VALUES (11, 10);
-INSERT INTO Recebe (id, idUser) VALUES (12, 9);
-INSERT INTO Recebe (id, idUser) VALUES (13, 8);
-INSERT INTO Recebe (id, idUser) VALUES (14, 7);
-INSERT INTO Recebe (id, idUser) VALUES (15, 6);
-INSERT INTO Recebe (id, idUser) VALUES (16, 5);
-INSERT INTO Recebe (id, idUser) VALUES (17, 4);
-INSERT INTO Recebe (id, idUser) VALUES (18, 3);
-INSERT INTO Recebe (id, idUser) VALUES (19, 2);
-INSERT INTO Recebe (id, idUser) VALUES (20, 1);
-
--- Data : Envia
-INSERT INTO Envia (id, idUser) VALUES (1, 1);
-INSERT INTO Envia (id, idUser) VALUES (2, 2);
-INSERT INTO Envia (id, idUser) VALUES (3, 3);
-INSERT INTO Envia (id, idUser) VALUES (4, 4);
-INSERT INTO Envia (id, idUser) VALUES (5, 5);
-INSERT INTO Envia (id, idUser) VALUES (6, 6);
-INSERT INTO Envia (id, idUser) VALUES (7, 7);
-INSERT INTO Envia (id, idUser) VALUES (8, 8);
-INSERT INTO Envia (id, idUser) VALUES (9, 9);
-INSERT INTO Envia (id, idUser) VALUES (10, 10);
-INSERT INTO Envia (id, idUser) VALUES (11, 11);
-INSERT INTO Envia (id, idUser) VALUES (12, 12);
-INSERT INTO Envia (id, idUser) VALUES (13, 13);
-INSERT INTO Envia (id, idUser) VALUES (14, 14);
-INSERT INTO Envia (id, idUser) VALUES (15, 15);
-INSERT INTO Envia (id, idUser) VALUES (16, 16);
-INSERT INTO Envia (id, idUser) VALUES (17, 17);
-INSERT INTO Envia (id, idUser) VALUES (18, 18);
-INSERT INTO Envia (id, idUser) VALUES (19, 19);
-INSERT INTO Envia (id, idUser) VALUES (20, 20);
 
 -- Data : SeguePlaylist
 INSERT INTO SeguePlaylist (idUser, idPlaylist) VALUES (1, 20);

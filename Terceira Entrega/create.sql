@@ -40,13 +40,6 @@ CREATE TABLE Dispositivo (
   idUser              INTEGER REFERENCES Utilizador (id) NOT NULL
 );
 
--- Table: Envia
-DROP TABLE IF EXISTS Envia;
-CREATE TABLE Envia (
-  id           INTEGER REFERENCES Mensagem (conteudo),
-  idUser       INTEGER REFERENCES Utilizador (id),
-  PRIMARY KEY (id, idUser)
-);
 
 -- Table: Genero
 DROP TABLE IF EXISTS Genero;
@@ -72,7 +65,10 @@ DROP TABLE IF EXISTS Mensagem;
 CREATE TABLE Mensagem (
   id          INTEGER PRIMARY KEY,
   conteudo    STRING NOT NULL CHECK(LENGTH(conteudo) <= 140),
-  dataEnvio   DATE NOT NULL
+  dataEnvio   DATE NOT NULL,
+  idEmissor   INTEGER REFERENCES Utilizador (id),
+  idRecetor   INTEGER REFERENCES Utilizador (id),
+  PRIMARY KEY (id, idEmissor, idRecetor)
 );
 
 -- Table: Musica
@@ -116,14 +112,6 @@ CREATE TABLE Playlist (
   duracao     TIME NOT NULL,
   descricao   STRING,
   idDono      INTEGER REFERENCES Utilizador (id) NOT NULL
-);
-
--- Table: Recebe
-DROP TABLE IF EXISTS Recebe;
-CREATE TABLE Recebe (
-  id        INTEGER REFERENCES Mensagem (id),
-  idUser    INTEGER REFERENCES Utilizador (id),
-  PRIMARY KEY (id, idUser)
 );
 
 -- Table: SegueInterprete
