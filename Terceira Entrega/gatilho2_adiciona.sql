@@ -1,19 +1,20 @@
-CREATE TRIGGER IF NOT EXISTS nome
-AFTER INSERT ON tabela
+CREATE TRIGGER IF NOT EXISTS AdicionaPlaylist
+AFTER INSERT ON Playlist
 FOR EACH ROW
 WHEN codicao
   BEGIN
-    INSERT INTO tabela VALUES
+    INSERT INTO MusicaPlaylist (idMusica, idPlaylist) VALUES (1, 17);
   END;
 
-CREATE TRIGGER IF NOT EXISTS nome
-AFTER DELETE ON tabela
+CREATE TRIGGER IF NOT EXISTS RemovePlaylist
+AFTER DELETE ON Playlist
 FOR EACH ROW
   BEGIN
     DELETE FROM tabela WHERE algo acontece;
   END;
 
-CREATE TRIGGER IF NOT EXISTS nome
+/* Atualiza o top de uma musica */
+CREATE TRIGGER IF NOT EXISTS AtualizaMusica
 AFTER UPDATE OF argumento ON tabela
 FOR EACH ROW
   BEGIN
