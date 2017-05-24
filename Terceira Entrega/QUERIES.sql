@@ -43,3 +43,15 @@ ON M.id=T.idMusica
 INNER JOIN MusicaPlaylist MP
 ON MP.idMusica=M.id
 WHERE MP.idPlaylist='4';
+
+--Top 5 interpretes mais seguidos
+
+SELECT I.nome AS Interprete, COUNT(U.id) AS Seguidores
+FROM Interprete I
+INNER JOIN SegueInterprete SI
+ON I.id=SI.idInterprete
+INNER JOIN Utilizador U
+ON U.id=SI.idUser
+GROUP BY I.nome
+ORDER BY Seguidores DESC
+LIMIT 5;
