@@ -1,0 +1,16 @@
+- Instruções para abrirem e correrem a database no programa SQLite -
+
+1. Instalar shell do sqlite no computador (tutorial no slide "SQLite Getting Started" no moodle)
+
+2. Na pasta C:\sqlite criar uma database, aka ficheiro.db
+
+3. Copiar e colar neste diretório os ficheiros create.sql e populate.sql que temos no github
+
+4. Na linha de comandos, entrar no mesmo diretório que estamos a falar, e inserir as seguintes linhas de comando:
+> sqlite3 spotify.db
+> .read create.sql
+> .read populate.sql
+
+5. Agora já podem abrir o programa e veem que a database já está preenchida.
+
+(ADICIONAR AQUI INSTRUCOES DE COMO TESTAR QUERIES E TRIGGERS)
