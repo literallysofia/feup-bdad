@@ -63,7 +63,7 @@ CREATE TABLE Interprete (
 -- Table: Mensagem
 DROP TABLE IF EXISTS Mensagem;
 CREATE TABLE Mensagem (
-  id          INTEGER PRIMARY KEY,
+  id          INTEGER,
   conteudo    STRING NOT NULL CHECK(LENGTH(conteudo) <= 140),
   dataEnvio   DATE NOT NULL,
   idEmissor   INTEGER REFERENCES Utilizador (id),
@@ -170,6 +170,7 @@ CREATE TABLE Utilizador (
   password          STRING NOT NULL CHECK(LENGTH(password) >= 6 AND LENGTH(password) <= 12),
   fotoPerfil        BLOB,
   dataNascimento    DATE NOT NULL,
+  idade             INTEGER NOT NULL,
   email             STRING NOT NULL UNIQUE
 );
 

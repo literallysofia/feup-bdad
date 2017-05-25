@@ -12,20 +12,29 @@ FOR EACH ROW
     INSERT INTO UtilizadorFree (id, tempoLimite) VALUES (New.id, 30);
   END;
 
-/* Quando é eliminado um utilizador, é apagado os respetivos dispositivos */
+/* Quando é eliminado um utilizador, é apagada toda a informacao referida ao mesmo */
+/* Ainda nao funciona */
 CREATE TRIGGER IF NOT EXISTS RemoveUtilizador
 AFTER DELETE ON Utilizador
 FOR EACH ROW
   BEGIN
     DELETE FROM Dispositivo WHERE Dispositivo.idUser = Old.id;
+    DELETE FROM UtilizadorFree WHERE UtilizadorFree.id = Old.id;
+    DELETE FROM UtilizadorPremium WHERE UtilizadorPremium.id = Old.id;
+    DELETE FROM SegueInterprete WHERE SegueInterprete.idUser = Old.id;
+    DELETE FROM SeguePlaylist WHERE SeguePlaylist.idUser = Old.id;
+    DELETE FROM SegueUtilizador WHERE SegueUtilizador.idUser = Old.id;
+    DELETE FROM SegueUtilizador WHERE SegueUtilizador.idUserSeguido = Old.id;
+    DELETE FROM Mensagem WHERE Mensagem.idEmissor = Old.id;
+    DELETE FROM Mensagem WHERE Mensagem.idRecetor = Old.id;
   END;
 
-/* tche sei la */
-CREATE TRIGGER IF NOT EXISTS AtualizaUtilizador
-AFTER UPDATE OF argumento ON Utilizador
+/* Quando a data de nascimento é mudada, a idade é atualizada */
+CREATE TRIGGER IF NOT EXISTS UpdateUtilizador
+AFTER UPDATE OF dataNascimento ON Utilizador
 FOR EACH ROW
   BEGIN
-    UPDATE tabela
-    SET argumento = New.argumento;
-    WHERE argumento = Old.argumento;
+    UPDATE Utilizador
+    SET idade = strftime('%m/%d/%Y', date('now')) - New.dataNascimento;
+    WHERE id = Old.id;
   END;
