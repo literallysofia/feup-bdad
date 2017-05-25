@@ -12,22 +12,12 @@ FOR EACH ROW
     WHERE id = New.idPlaylist;
   END;
 
-/* Quando é apagada uma musica a uma playlist, a sua duracao dominui */
+/* Quando é removida uma musica a uma playlist, a sua duracao diminui */
 CREATE TRIGGER IF NOT EXISTS RemoveMusicaPlaylist
 AFTER DELETE ON MusicaPlaylist
 FOR EACH ROW
   BEGIN
     UPDATE Playlist
-    SET duracao = duracao + (SELECT Musica.duracao FROM Musica WHERE Musica.id = New.idMusica)
-    WHERE id = New.idPlaylist;
-  END;
-
-/* Atualiza o top de uma musica */
-CREATE TRIGGER IF NOT EXISTS UpdatePLaylist
-AFTER UPDATE OF argumento ON tabela
-FOR EACH ROW
-  BEGIN
-    UPDATE tabela
-    SET argumento = New.argumento
-    WHERE argumento = Old.argumento;
+    SET duracao = duracao - (SELECT Musica.duracao FROM Musica WHERE Musica.id = Old.idMusica)
+    WHERE id = Old.idPlaylist;
   END;
