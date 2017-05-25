@@ -7,7 +7,7 @@ CREATE TRIGGER IF NOT EXISTS ValidaDataNascimento
 BEFORE UPDATE OF dataNascimento ON Utilizador
 WHEN julianday(New.dataNascimento) > round((julianday('now') - 3650))
   BEGIN
-    Select RAISE(ABORT, "data de nascimento invalida!");
+    SELECT RAISE(ABORT, "data de nascimento invalida!");
   END;
 
 /* Quando a data de nascimento é mudada, a idade é atualizada */
