@@ -15,9 +15,12 @@ WHERE Interprete.nome = 'Radiohead';
 
 -- A música em 6ª posição em cada cidade.
 SELECT DISTINCT Cidade.nome AS Cidade, Musica.nome AS Musica
-FROM Cidade, Musica
+FROM Cidade
 INNER JOIN Top
-ON Top.idMusica = Musica.id AND Top.posicao = 6
+ON Cidade.id = Top.idCidade
+INNER JOIN Musica
+ON Top.idMusica = Musica.id
+WHERE Top.posicao = 6
 GROUP BY Cidade.nome;
 
 -- Número de álbuns de estúdio de cada artista, ordenados de forma descendente.
