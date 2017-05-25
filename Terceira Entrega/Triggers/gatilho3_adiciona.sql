@@ -2,22 +2,28 @@
 .header on
 .nullvalue NULL
 
-CREATE TRIGGER IF NOT EXISTS nome
-AFTER INSERT ON tabela
-FOR EACH ROW
-WHEN codicao
-  BEGIN
-    INSERT INTO tabela VALUES
-  END;
-
-CREATE TRIGGER IF NOT EXISTS nome
-AFTER DELETE ON tabela
+/* Quando é adicionada uma musica a uma playlist, a sua duracao aumenta */
+CREATE TRIGGER IF NOT EXISTS AdicionaMusicaPlaylist
+AFTER INSERT ON MusicaPlaylist
 FOR EACH ROW
   BEGIN
-    DELETE FROM tabela WHERE algo acontece;
+    UPDATE Playlist
+    SET duracao = duracao + (SELECT Musica.duracao FROM Musica WHERE Musica.id = New.idMusica)
+    WHERE id = New.idPlaylist;
   END;
 
-CREATE TRIGGER IF NOT EXISTS nome
+/* Quando é apagada uma musica a uma playlist, a sua duracao dominui */
+CREATE TRIGGER IF NOT EXISTS RemoveMusicaPlaylist
+AFTER DELETE ON MusicaPlaylist
+FOR EACH ROW
+  BEGIN
+    UPDATE Playlist
+    SET duracao = duracao + (SELECT Musica.duracao FROM Musica WHERE Musica.id = New.idMusica)
+    WHERE id = New.idPlaylist;
+  END;
+
+/* Atualiza o top de uma musica */
+CREATE TRIGGER IF NOT EXISTS UpdatePLaylist
 AFTER UPDATE OF argumento ON tabela
 FOR EACH ROW
   BEGIN
