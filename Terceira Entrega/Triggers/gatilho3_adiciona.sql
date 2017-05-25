@@ -1,3 +1,7 @@
+.mode columns
+.header on
+.nullvalue NULL
+
 CREATE TRIGGER IF NOT EXISTS nome
 AFTER INSERT ON tabela
 FOR EACH ROW

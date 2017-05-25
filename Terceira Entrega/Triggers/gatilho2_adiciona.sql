@@ -1,3 +1,7 @@
+.mode columns
+.header on
+.nullvalue NULL
+
 CREATE TRIGGER IF NOT EXISTS AdicionaPlaylist
 AFTER INSERT ON Playlist
 FOR EACH ROW
