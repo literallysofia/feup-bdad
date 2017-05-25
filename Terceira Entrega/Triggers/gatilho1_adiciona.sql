@@ -15,7 +15,7 @@ FOR EACH ROW
 /* Quando é eliminado um utilizador, é apagada toda a informacao referida ao mesmo */
 /* Ainda nao funciona */
 CREATE TRIGGER IF NOT EXISTS RemoveUtilizador
-AFTER DELETE ON Utilizador
+BEFORE DELETE ON Utilizador
 FOR EACH ROW
   BEGIN
     DELETE FROM Dispositivo WHERE Dispositivo.idUser = Old.id;
@@ -27,6 +27,7 @@ FOR EACH ROW
     DELETE FROM SegueUtilizador WHERE SegueUtilizador.idUserSeguido = Old.id;
     DELETE FROM Mensagem WHERE Mensagem.idEmissor = Old.id;
     DELETE FROM Mensagem WHERE Mensagem.idRecetor = Old.id;
+    DELETE FROM Playlist WHERE Playlist.idDono = Old.id;
   END;
 
 /* Quando a data de nascimento é mudada, a idade é atualizada */
@@ -35,6 +36,6 @@ AFTER UPDATE OF dataNascimento ON Utilizador
 FOR EACH ROW
   BEGIN
     UPDATE Utilizador
-    SET idade = strftime('%m/%d/%Y', date('now')) - New.dataNascimento;
-    WHERE id = Old.id;
+    SET idade = date('now') - New.dataNascimento
+    WHERE id = New.id;
   END;
