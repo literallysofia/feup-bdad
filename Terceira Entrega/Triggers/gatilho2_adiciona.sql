@@ -2,13 +2,14 @@
 .header on
 .nullvalue NULL
 
+/* Quando é adicionada uma musica a uma playlist, a sua duracao aumenta */
 CREATE TRIGGER IF NOT EXISTS UpdatePLaylist
 AFTER INSERT ON MusicaPlaylist
 FOR EACH ROW
   BEGIN
     UPDATE Playlist
-    SET PLaylist.duracao = PLaylist.duracao + (SELECT Musica.duracao FROM Musica WHERE Musica.id = New.idMusica);
-    WHERE Playlist.id = New.idPlaylist;
+    SET duracao = duracao + (SELECT Musica.duracao FROM Musica WHERE Musica.id = New.idMusica)
+    WHERE id = New.idPlaylist;
   END;
 
 CREATE TRIGGER IF NOT EXISTS RemoveMusica
