@@ -170,7 +170,6 @@ CREATE TABLE Utilizador (
   password          STRING NOT NULL CHECK(LENGTH(password) >= 6 AND LENGTH(password) <= 12),
   fotoPerfil        BLOB,
   dataNascimento    DATE NOT NULL,
-  idade             INTEGER NOT NULL,
   email             STRING NOT NULL UNIQUE
 );
 

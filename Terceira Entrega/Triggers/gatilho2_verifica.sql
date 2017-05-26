@@ -6,7 +6,7 @@
 .print 'Estado atual do Utilizador:'
 .print ''
 
-SELECT Utilizador.id AS 'ID', Utilizador.nome AS 'Nome', Utilizador.dataNascimento AS 'Data Nascimento', Utilizador.idade AS 'Idade'
+SELECT Utilizador.id AS 'ID', Utilizador.nome AS 'Nome', Utilizador.dataNascimento AS 'Data Nascimento'
 FROM Utilizador
 WHERE Utilizador.id = 1;
 
@@ -19,17 +19,16 @@ WHERE Utilizador.id = 1;
 UPDATE Utilizador SET dataNascimento = '2010-02-20' WHERE Utilizador.id = 1;
 
 .print ''
-SELECT Utilizador.id AS 'ID', Utilizador.nome AS 'Nome', Utilizador.dataNascimento AS 'Data Nascimento', Utilizador.idade AS 'Idade'
+SELECT Utilizador.id AS 'ID', Utilizador.nome AS 'Nome', Utilizador.dataNascimento AS 'Data Nascimento'
 FROM Utilizador
 WHERE Utilizador.id = 1;
 
 .print ''
-.print 'Ao ser validado, ou seja, apos ser atualizada a data de nascimento, a idade sera ajustada.'
-.print 'Data de nascimento = 1995-02-20 (caso valido) :'
+.print 'Data de nascimento = 2000-02-20 (caso valido) :'
 .print ''
 
-UPDATE Utilizador SET dataNascimento = '1995-02-20' WHERE Utilizador.id = 1;
+UPDATE Utilizador SET dataNascimento = '2000-02-20' WHERE Utilizador.id = 1;
 
-SELECT Utilizador.id AS 'ID', Utilizador.nome AS 'Nome', Utilizador.dataNascimento AS 'Data Nascimento', Utilizador.idade AS 'Idade'
+SELECT Utilizador.id AS 'ID', Utilizador.nome AS 'Nome', Utilizador.dataNascimento AS 'Data Nascimento'
 FROM Utilizador
 WHERE Utilizador.id = 1;
