@@ -66,26 +66,26 @@ INSERT INTO Interprete (id, nome, verificado, fotoPerfil, fotoCapa, biografia, i
 INSERT INTO Interprete (id, nome, verificado, fotoPerfil, fotoCapa, biografia, idCidade) VALUES (20, 'All Time Low', 'true', 'https://robohash.org/cumquenequenon.jpg?size=50x50&set=set1', 'http://dummyimage.com/120x206.png/ff4444/ffffff', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id consequat tortor, a porttitor neque. Nunc faucibus congue elit, blandit cursus nulla tempor vel. Praesent condimentum elit diam, a molestie.', 12);
 
 -- Data : Concerto
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (1, '02/09/2018', 1, 1);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (2, '03/09/2018', 1, 2);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (3, '04/01/2018', 1, 5);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (4, '07/29/2017', 4, 9);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (5, '10/21/2017', 9, 1);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (6, '06/18/2017', 7, 5);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (7, '12/29/2017', 2, 10);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (8, '12/13/2017', 19, 7);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (9, '10/02/2017', 9, 16);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (10, '06/06/2017', 4, 1);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (11, '06/08/2018', 4, 15);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (12, '10/06/2017', 13, 12);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (13, '06/04/2018', 7, 6);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (14, '11/24/2017', 20, 2);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (15, '03/02/2018', 15, 1);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (16, '03/23/2018', 15, 17);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (17, '06/10/2017', 7, 10);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (18, '05/11/2017', 18, 1);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (19, '06/03/2017', 7, 19);
-INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (20, '08/10/2017', 18, 5);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (1, '2018-02-09', 1, 1);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (2, '2018-03-09', 1, 2);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (3, '2018-04-01', 1, 5);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (4, '2017-07-29', 4, 9);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (5, '2017-10-21', 9, 1);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (6, '2017-06-18', 7, 5);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (7, '2017-12-29', 2, 10);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (8, '2017-12-13', 19, 7);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (9, '2017-10-02', 9, 16);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (10, '2017-06-06', 4, 1);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (11, '2018-06-08', 4, 15);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (12, '2017-10-06', 13, 12);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (13, '2018-06-04', 7, 6);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (14, '2017-11-24', 20, 2);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (15, '2018-03-02', 15, 1);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (16, '2018-03-23', 15, 17);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (17, '2017-10-06', 7, 10);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (18, '2017-05-11', 18, 1);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (19, '2017-06-03', 7, 19);
+INSERT INTO Concerto (idConcerto, data, idInterprete, idCidade) VALUES (20, '2017-08-10', 18, 5);
 
 -- Data : TipoAlbum
 INSERT INTO TipoAlbum (idTipoAlbum, tipoNome) VALUES (1, 'Studio');
