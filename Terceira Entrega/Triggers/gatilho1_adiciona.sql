@@ -2,6 +2,8 @@
 .header on
 .nullvalue NULL
 
+PRAGMA foreign_keys = ON;
+
 /* Quando é criado um utilizador, é automaticamente criado um dispositivo um UtilizadorFree */
 CREATE TRIGGER IF NOT EXISTS AdicionaUtilizador
 AFTER INSERT ON Utilizador

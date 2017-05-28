@@ -2,6 +2,8 @@
 .header on
 .nullvalue NULL
 
+PRAGMA foreign_keys = ON;
+
 /* Quando é adicionada uma musica a uma playlist, a sua duracao aumenta */
 CREATE TRIGGER IF NOT EXISTS AdicionaMusicaPlaylist
 AFTER INSERT ON MusicaPlaylist
