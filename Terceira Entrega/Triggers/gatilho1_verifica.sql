@@ -2,6 +2,8 @@
 .header on
 .nullvalue NULL
 
+PRAGMA foreign_keys = ON;
+
 .print ''
 
 SELECT count (*) AS 'Num Utilizador.id = 21'

@@ -2,6 +2,8 @@
 .header on
 .nullvalue NULL
 
+PRAGMA foreign_keys = ON;
+
 .print ''
 .print 'Estado atual do Utilizador:'
 .print ''
